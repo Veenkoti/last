@@ -62,7 +62,7 @@ export default function NorthernJournal() {
   }
 
   return (
-    <div className="min-h-screen relative flex items-center justify-center p-4 text-white">
+<div className="min-h-screen relative flex items-center justify-center p-4 text-white border-4 border-red-500 z-50">
       {lanternMode && (
         <video
           autoPlay
