@@ -62,7 +62,7 @@ export default function NorthernJournal() {
   }
 
   return (
-<div className="min-h-screen relative flex items-center justify-center p-4 text-white border-4 border-red-500 z-50">
+    <div className="min-h-screen relative flex items-center justify-center p-4 text-white bg-black">
       {lanternMode && (
         <video
           autoPlay
@@ -75,7 +75,7 @@ export default function NorthernJournal() {
         </video>
       )}
 
-      <div className="absolute top-4 right-4 z-10">
+      <div className="absolute top-4 right-4 z-20">
         <button
           onClick={() => setLanternMode(!lanternMode)}
           className="bg-gray-800 px-4 py-2 rounded text-white"
@@ -84,16 +84,16 @@ export default function NorthernJournal() {
         </button>
       </div>
 
-      <div className="relative z-10 max-w-xl w-full space-y-6">
+      <div className="relative z-20 max-w-xl w-full space-y-6 border-2 border-red-500 bg-black bg-opacity-70 p-6 rounded-lg">
         <h1 className="text-3xl font-bold text-center">Northern Journal</h1>
         <p className="text-center italic text-sm text-gray-300">
           Healing begins in silence. Sometimes, you need to be away from your devices and just exist.
         </p>
-        <div className="shadow-xl bg-white bg-opacity-10 backdrop-blur-md p-6 space-y-4 rounded-lg">
-          <p className="text-lg text-white">{prompt || "Click below to receive a journal prompt."}</p>
+        <div>
+          <p className="text-lg">{prompt || "Click below to receive a journal prompt."}</p>
           <button
             onClick={generatePrompt}
-            className="w-full bg-blue-600 text-white py-2 px-4 rounded"
+            className="w-full bg-blue-600 text-white py-2 px-4 rounded mt-2"
           >
             Generate Prompt
           </button>
@@ -104,7 +104,7 @@ export default function NorthernJournal() {
             placeholder="Write your thoughts here..."
             className="w-full mt-4 p-2 rounded bg-white bg-opacity-20 text-white placeholder-gray-300 resize-none min-h-[150px]"
           />
-          <div className="flex gap-2">
+          <div className="flex gap-2 mt-2">
             <button
               onClick={copyToClipboard}
               className="w-full bg-yellow-500 text-black py-2 px-4 rounded"
